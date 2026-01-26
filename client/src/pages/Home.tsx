@@ -133,9 +133,7 @@ export default function Home() {
               <div className="flex flex-wrap justify-center gap-8 md:gap-16 grayscale hover:grayscale-0 transition-all duration-500">
                 {skills.map((skill) => (
                   <div key={skill.name} className="flex flex-col items-center gap-2 group">
-                    <div className="p-4 rounded-2xl bg-secondary/50 group-hover:bg-primary/10 transition-colors">
-                      <skill.icon className="w-8 h-8 text-muted-foreground group-hover:text-primary transition-colors" />
-                    </div>
+                    <skill.icon className="w-8 h-8 text-muted-foreground group-hover:text-primary transition-colors" />
                     <span className="text-sm font-medium">{skill.name}</span>
                   </div>
                 ))}
