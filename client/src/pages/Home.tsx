@@ -116,12 +116,7 @@ export default function Home() {
                   
                   {/* Avatar Container */}
                   <div className="absolute inset-8 rounded-full overflow-hidden border-4 border-background shadow-2xl">
-                    {/* Placeholder for Headshot - using a nice gradient or unspash fallback if unavailable */}
-                    <div className="w-full h-full bg-gradient-to-br from-gray-100 to-gray-300 dark:from-gray-800 dark:to-gray-900 flex items-center justify-center text-4xl font-display font-bold text-muted-foreground">
-                      NB
-                    </div>
-                    {/* If user uploads image later, replace div above with: */}
-                    {/* <img src="/images/headshot.jpg" alt="Naima Bogran" className="w-full h-full object-cover" /> */}
+                    <img src="/images/headshot.jpg" alt="Naima Bogran" className="w-full h-full object-cover" />
                   </div>
                 </div>
               </motion.div>
