@@ -7,7 +7,15 @@ import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { motion } from "framer-motion";
 import { Link as ScrollLink } from "react-scroll";
-import { Code, Database, Globe, Layers, Layout, Server, Cpu } from "lucide-react";
+import {
+  Code,
+  Database,
+  Globe,
+  Layers,
+  Layout,
+  Server,
+  Cpu,
+} from "lucide-react";
 
 export default function Home() {
   const { data: projects, isLoading } = useProjects();
@@ -29,26 +37,26 @@ export default function Home() {
           <div className="font-display font-bold text-xl tracking-tighter">
             NB<span className="text-primary">.</span>
           </div>
-          
+
           <div className="flex items-center gap-6">
             <div className="hidden md:flex gap-6 text-sm font-medium">
-              <ScrollLink 
-                to="about" 
-                smooth={true} 
+              <ScrollLink
+                to="about"
+                smooth={true}
                 className="cursor-pointer hover:text-primary transition-colors"
               >
                 About
               </ScrollLink>
-              <ScrollLink 
-                to="projects" 
-                smooth={true} 
+              <ScrollLink
+                to="projects"
+                smooth={true}
                 className="cursor-pointer hover:text-primary transition-colors"
               >
                 Projects
               </ScrollLink>
-              <ScrollLink 
-                to="contact" 
-                smooth={true} 
+              <ScrollLink
+                to="contact"
+                smooth={true}
                 className="cursor-pointer hover:text-primary transition-colors"
               >
                 Contact
@@ -61,7 +69,10 @@ export default function Home() {
 
       <main>
         {/* Hero Section */}
-        <section id="about" className="pt-32 pb-20 md:pt-48 md:pb-32 px-4 relative overflow-hidden">
+        <section
+          id="about"
+          className="pt-32 pb-20 md:pt-48 md:pb-32 px-4 relative overflow-hidden"
+        >
           {/* Background decorative elements */}
           <div className="absolute top-20 right-0 w-[500px] h-[500px] bg-primary/10 rounded-full blur-[100px] -z-10" />
           <div className="absolute bottom-0 left-0 w-[300px] h-[300px] bg-blue-500/10 rounded-full blur-[80px] -z-10" />
@@ -77,24 +88,32 @@ export default function Home() {
                   Available for Hire
                 </div>
                 <h1 className="text-5xl md:text-7xl font-display font-bold leading-[1.1] mb-6">
-                  Hi, I'm <br/>
+                  Hi, I'm <br />
                   <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-purple-400">
                     Naima Bogran
                   </span>
                 </h1>
                 <p className="text-xl text-muted-foreground leading-relaxed mb-8 max-w-lg">
-                  Junior Full Stack Developer crafting impressive applications with modern web technologies. 
-                  Specializing in the MERN stack to bring creative ideas to life.
+                  Junior Full Stack Developer crafting impressive applications
+                  with modern web technologies. Specializing in the MERN stack
+                  to bring creative ideas to life.
                 </p>
-                
+
                 <div className="flex flex-col sm:flex-row gap-4 mb-10">
                   <ScrollLink to="projects" smooth={true}>
-                    <Button size="lg" className="rounded-full px-8 text-lg h-14 shadow-xl shadow-primary/20 hover:shadow-primary/40 transition-all">
+                    <Button
+                      size="lg"
+                      className="rounded-full px-8 text-lg h-14 shadow-xl shadow-primary/20 hover:shadow-primary/40 transition-all"
+                    >
                       View My Work
                     </Button>
                   </ScrollLink>
                   <ScrollLink to="contact" smooth={true}>
-                    <Button size="lg" variant="outline" className="rounded-full px-8 text-lg h-14 border-2">
+                    <Button
+                      size="lg"
+                      variant="outline"
+                      className="rounded-full px-8 text-lg h-14 border-2"
+                    >
                       Contact Me
                     </Button>
                   </ScrollLink>
@@ -113,26 +132,35 @@ export default function Home() {
                   {/* Decorative rings */}
                   <div className="absolute inset-0 rounded-full border-2 border-primary/20 animate-[spin_10s_linear_infinite]" />
                   <div className="absolute inset-4 rounded-full border-2 border-dashed border-primary/30 animate-[spin_15s_linear_infinite_reverse]" />
-                  
+
                   {/* Avatar Container */}
                   <div className="absolute inset-8 rounded-full overflow-hidden border-4 border-background shadow-2xl">
-                    <img src="/images/headshot.jpg" alt="Naima Bogran" className="w-full h-full object-cover" />
+                    <img
+                      src="/images/headshot.jpg"
+                      alt="Naima Bogran"
+                      className="w-full h-full object-cover"
+                    />
                   </div>
                 </div>
               </motion.div>
             </div>
 
             {/* Tech Stack Ticker/Grid */}
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
               className="mt-24 pt-12 border-t border-border/40"
             >
-              <p className="text-center text-muted-foreground mb-8 font-medium">Powering applications with</p>
+              <p className="text-center text-muted-foreground mb-8 font-medium">
+                Powering applications with
+              </p>
               <div className="flex flex-wrap justify-center gap-8 md:gap-16 grayscale hover:grayscale-0 transition-all duration-500">
                 {skills.map((skill) => (
-                  <div key={skill.name} className="flex flex-col items-center gap-2 group">
+                  <div
+                    key={skill.name}
+                    className="flex flex-col items-center gap-2 group"
+                  >
                     <skill.icon className="w-8 h-8 text-muted-foreground group-hover:text-primary transition-colors" />
                     <span className="text-sm font-medium">{skill.name}</span>
                   </div>
@@ -146,22 +174,32 @@ export default function Home() {
         <section id="projects" className="py-24 bg-secondary/30">
           <div className="container mx-auto px-4 max-w-6xl">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-5xl font-display font-bold mb-4">Featured Projects</h2>
+              <h2 className="text-3xl md:text-5xl font-display font-bold mb-4">
+                Featured Projects
+              </h2>
               <p className="text-muted-foreground max-w-2xl mx-auto">
-                A selection of full-stack applications built to solve real-world problems.
+                A selection of full-stack applications built to solve real-world
+                problems.
               </p>
             </div>
 
             {isLoading ? (
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {[1, 2, 3].map((i) => (
-                  <div key={i} className="h-[400px] rounded-2xl bg-muted animate-pulse" />
+                  <div
+                    key={i}
+                    className="h-[400px] rounded-2xl bg-muted animate-pulse"
+                  />
                 ))}
               </div>
             ) : (
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {projects?.map((project, index) => (
-                  <ProjectCard key={project.id} project={project} index={index} />
+                  <ProjectCard
+                    key={project.id}
+                    project={project}
+                    index={index}
+                  />
                 ))}
               </div>
             )}
@@ -173,11 +211,15 @@ export default function Home() {
           <div className="container mx-auto px-4 max-w-6xl">
             <div className="grid md:grid-cols-2 gap-16 items-center">
               <div>
-                <h2 className="text-4xl md:text-5xl font-display font-bold mb-6">Let's work together</h2>
+                <h2 className="text-4xl md:text-5xl font-display font-bold mb-6">
+                  Let's work together
+                </h2>
                 <p className="text-lg text-muted-foreground mb-8">
-                  I'm currently looking for new opportunities. Whether you have a question or just want to say hi, I'll try my best to get back to you!
+                  I'm currently looking for new opportunities. Whether you have
+                  a question or just want to say hi, I'll try my best to get
+                  back to you!
                 </p>
-                
+
                 <div className="space-y-6">
                   <div className="flex items-center gap-4">
                     <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">
@@ -185,7 +227,7 @@ export default function Home() {
                     </div>
                     <div>
                       <p className="font-medium">Location</p>
-                      <p className="text-muted-foreground">Remote / Worldwide</p>
+                      <p className="text-muted-foreground">Boston, MA</p>
                     </div>
                   </div>
                   <div className="flex items-center gap-4">
@@ -194,7 +236,9 @@ export default function Home() {
                     </div>
                     <div>
                       <p className="font-medium">Status</p>
-                      <p className="text-muted-foreground">Open to opportunities</p>
+                      <p className="text-muted-foreground">
+                        Open to opportunities
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -208,7 +252,10 @@ export default function Home() {
 
       <footer className="py-8 border-t border-border/40 text-center text-muted-foreground text-sm">
         <div className="container mx-auto px-4">
-          <p>© {new Date().getFullYear()} Naima Bogran. Built with React & Tailwind.</p>
+          <p>
+            © {new Date().getFullYear()} Naima Bogran. Built with React &
+            Tailwind.
+          </p>
         </div>
       </footer>
     </div>
