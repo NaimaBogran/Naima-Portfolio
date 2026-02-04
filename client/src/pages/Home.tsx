@@ -25,7 +25,6 @@ export default function Home() {
     { name: "Node.js", icon: Server },
     { name: "Express", icon: Layout },
     { name: "MongoDB", icon: Database },
-    { name: "React", icon: Globe },
     { name: "Full Stack", icon: Layers },
   ];
 

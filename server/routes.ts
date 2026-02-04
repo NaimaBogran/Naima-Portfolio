@@ -61,7 +61,7 @@ async function seedDatabase() {
       description: "A virtual coworking application where users match with other users based on work filters and camera preference to find a partner to body double with. Includes an integrated Pomodoro timer to prevent burnout.",
       imageUrl: "/images/body-double.png",
       projectUrl: "https://body-double.onrender.com/",
-      techStack: ["React", "Node.js", "Express", "Socket.io", "MongoDB"]
+      techStack: ["Node.js", "Express", "Socket.io", "MongoDB"]
     });
 
     await storage.createProject({
@@ -69,7 +69,7 @@ async function seedDatabase() {
       description: "A social goal-setting app that allows users to join or create groups, set timelines for goals, and bet real money on achieving them. Money is returned upon success or distributed to the group on failure.",
       imageUrl: "/images/bet-on-me.png",
       projectUrl: "https://bet-on-me.onrender.com/",
-      techStack: ["React", "Node.js", "Stripe API", "PostgreSQL"]
+      techStack: ["Node.js", "Stripe API", "PostgreSQL"]
     });
 
     await storage.createProject({
@@ -77,7 +77,7 @@ async function seedDatabase() {
       description: "A holistic wellness website for a women's practice, featuring appointment scheduling, resource sharing, and community engagement tools.",
       imageUrl: "/images/letgolab.png",
       projectUrl: "https://curl-date-86463638.figma.site/",
-      techStack: ["React", "CSS", "Express"]
+      techStack: ["CSS", "Express"]
     });
     
     console.log("Seeding complete.");
