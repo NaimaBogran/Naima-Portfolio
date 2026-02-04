@@ -94,7 +94,7 @@ export default function Home() {
                   </span>
                 </h1>
                 <p className="text-xl text-muted-foreground leading-relaxed mb-8 max-w-lg">
-                  Junior Full Stack Developer crafting impressive applications
+                  Full Stack Developer crafting impressive applications
                   with modern web technologies. Specializing in the MERN stack
                   to bring creative ideas to life.
                 </p>
