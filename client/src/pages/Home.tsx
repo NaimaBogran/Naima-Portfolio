@@ -129,8 +129,16 @@ export default function Home() {
               >
                 <div className="relative w-72 h-72 md:w-96 md:h-96">
                   {/* Decorative rings */}
-                  <div className="absolute inset-0 rounded-full border-2 border-primary/20 animate-[spin_10s_linear_infinite]" />
-                  <div className="absolute inset-4 rounded-full border-2 border-dashed border-primary/30 animate-[spin_15s_linear_infinite_reverse]" />
+                  <motion.div 
+                    className="absolute inset-0 rounded-full border-2 border-primary/20"
+                    animate={{ rotate: 360 }}
+                    transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+                  />
+                  <motion.div 
+                    className="absolute inset-4 rounded-full border-2 border-dashed border-primary/30"
+                    animate={{ rotate: -360, scale: [1, 1.05, 1] }}
+                    transition={{ duration: 25, repeat: Infinity, ease: "easeInOut" }}
+                  />
 
                   {/* Avatar Container */}
                   <div className="absolute inset-8 rounded-full overflow-hidden border-4 border-background shadow-2xl">
