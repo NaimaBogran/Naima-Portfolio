@@ -1,0 +1,5 @@
+<svg width="400" height="300" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="300" fill="#f0f0f0"/>
+  <rect x="10" y="10" width="380" height="280" fill="none" stroke="#333" stroke-width="2"/>
+  <text x="200" y="150" font-size="48" font-weight="bold" text-anchor="middle" dominant-baseline="middle" fill="#333">Meeting Tax</text>
+</svg>

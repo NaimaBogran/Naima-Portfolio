@@ -79,6 +79,14 @@ async function seedDatabase() {
       projectUrl: "https://curl-date-86463638.figma.site/",
       techStack: ["CSS", "Express"]
     });
+
+    await storage.createProject({
+      title: "Meeting Tax",
+      description: "A productivity tool that calculates the cost of meetings based on participant salaries and duration. Helps teams understand the true cost of their meetings and optimize time management.",
+      imageUrl: "/images/meeting-tax.png",
+      projectUrl: "https://meeting-tax.vercel.app/",
+      techStack: ["Node.js", "JavaScript", "PostgreSQL"]
+    });
     
     console.log("Seeding complete.");
   }
