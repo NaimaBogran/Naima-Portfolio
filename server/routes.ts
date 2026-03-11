@@ -52,42 +52,39 @@ export async function registerRoutes(
 }
 
 async function seedDatabase() {
-  const existingProjects = await storage.getProjects();
-  if (existingProjects.length === 0) {
-    console.log("Seeding database with initial projects...");
-    
-    await storage.createProject({
-      title: "BODY/DOUBLE",
-      description: "A virtual coworking application where users match with other users based on work filters and camera preference to find a partner to body double with. Includes an integrated Pomodoro timer to prevent burnout.",
-      imageUrl: "/images/body-double.png",
-      projectUrl: "https://body-double.onrender.com/",
-      techStack: ["Node.js", "Express", "Socket.io", "MongoDB"]
-    });
+  console.log("Syncing projects...");
 
-    await storage.createProject({
-      title: "Bet On Me",
-      description: "A social goal-setting app that allows users to join or create groups, set timelines for goals, and bet real money on achieving them. Money is returned upon success or distributed to the group on failure.",
-      imageUrl: "/images/bet-on-me.png",
-      projectUrl: "https://bet-on-me.onrender.com/",
-      techStack: ["Node.js", "Stripe API", "PostgreSQL"]
-    });
+  await storage.upsertProjectByTitle({
+    title: "BODY/DOUBLE",
+    description: "A virtual coworking application where users match with other users based on work filters and camera preference to find a partner to body double with. Includes an integrated Pomodoro timer to prevent burnout.",
+    imageUrl: "/images/body-double.png",
+    projectUrl: "https://body-double.onrender.com/",
+    techStack: ["Node.js", "Express", "Socket.io", "MongoDB"]
+  });
 
-    await storage.createProject({
-      title: "LetGoLab",
-      description: "A holistic wellness website for a women's practice, featuring appointment scheduling, resource sharing, and community engagement tools.",
-      imageUrl: "/images/letgolab.png",
-      projectUrl: "https://curl-date-86463638.figma.site/",
-      techStack: ["CSS", "Express"]
-    });
+  await storage.upsertProjectByTitle({
+    title: "Bet On Me",
+    description: "A social goal-setting app that allows users to join or create groups, set timelines for goals, and bet real money on achieving them. Money is returned upon success or distributed to the group on failure.",
+    imageUrl: "/images/bet-on-me.png",
+    projectUrl: "https://bet-on-me.onrender.com/",
+    techStack: ["Node.js", "Stripe API", "PostgreSQL"]
+  });
 
-    await storage.createProject({
-      title: "Meeting Tax",
-      description: "A productivity tool that calculates the cost of meetings based on participant salaries and duration. Helps teams understand the true cost of their meetings and optimize time management.",
-      imageUrl: "/images/meeting-tax.png",
-      projectUrl: "https://meeting-tax.vercel.app/",
-      techStack: ["Node.js", "JavaScript", "PostgreSQL"]
-    });
-    
-    console.log("Seeding complete.");
-  }
+  await storage.upsertProjectByTitle({
+    title: "LetGoLab",
+    description: "A holistic wellness website for a women's practice, featuring appointment scheduling, resource sharing, and community engagement tools.",
+    imageUrl: "/images/letgolab.png",
+    projectUrl: "https://curl-date-86463638.figma.site/",
+    techStack: ["CSS", "Express"]
+  });
+
+  await storage.upsertProjectByTitle({
+    title: "Meeting Tax",
+    description: "A productivity tool that calculates the cost of meetings based on participant salaries and duration. Helps teams understand the true cost of their meetings and optimize time management.",
+    imageUrl: "/images/meeting-tax.png",
+    projectUrl: "https://meeting-tax.vercel.app/",
+    techStack: ["Node.js", "JavaScript", "PostgreSQL"]
+  });
+
+  console.log("Projects synced.");
 }
