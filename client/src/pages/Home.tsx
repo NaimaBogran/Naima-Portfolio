@@ -28,16 +28,16 @@ export default function Home() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   useEffect(() => {
-    document.title = "Naima Bogran — Full Stack Developer | Boston, MA";
+    document.title = "Naima Bogran | Full Stack Developer | Boston, MA";
     const setMeta = (selector: string, content: string) => {
       const el = document.querySelector(selector);
       if (el) el.setAttribute("content", content);
     };
     setMeta('meta[name="description"]', "Naima Bogran is a Full Stack Developer based in Boston, MA. She builds full-stack web applications, has experience with AI-powered tools, and leads the Latinas in Tech Boston chapter.");
-    setMeta('meta[property="og:title"]', "Naima Bogran — Full Stack Developer");
-    setMeta('meta[property="og:description"]', "Full Stack Developer building real products from idea to launch. Based in Boston, MA. Chapter Lead at Latinas in Tech.");
-    setMeta('meta[name="twitter:title"]', "Naima Bogran — Full Stack Developer");
-    setMeta('meta[name="twitter:description"]', "Full Stack Developer building real products from idea to launch. Based in Boston, MA. Chapter Lead at Latinas in Tech.");
+    setMeta('meta[property="og:title"]', "Naima Bogran | Full Stack Developer");
+    setMeta('meta[property="og:description"]', "Full Stack Developer building real products from idea to launch. Based in Boston, MA. Chapter Lead at Latinas in Tech Boston.");
+    setMeta('meta[name="twitter:title"]', "Naima Bogran | Full Stack Developer");
+    setMeta('meta[name="twitter:description"]', "Full Stack Developer building real products from idea to launch. Based in Boston, MA. Chapter Lead at Latinas in Tech Boston.");
   }, []);
 
   const skills = [
@@ -52,10 +52,10 @@ export default function Home() {
   const communityCards = [
     {
       icon: Users,
-      title: "Latinas in Tech",
+      title: "Latinas in Tech Boston",
       role: "Chapter Lead",
       description:
-        "Leading and growing the Boston chapter of Latinas in Tech — organizing events, building community, and creating space for Latina engineers to connect, grow, and thrive.",
+        "Leading and growing Latinas in Tech Boston, organizing events, building community, and creating space for Latina engineers to connect, grow, and thrive.",
     },
     {
       icon: Code,
@@ -69,7 +69,7 @@ export default function Home() {
       title: "Mentorship",
       role: "Mentor",
       description:
-        "Mentoring engineers who are early in their careers — sharing what I've learned, helping people navigate job searches, and paying forward the support I've received along the way.",
+        "Mentoring engineers who are early in their careers, sharing what I've learned, helping people navigate job searches, and paying forward the support I've received along the way.",
     },
     {
       icon: Globe,
@@ -176,7 +176,7 @@ export default function Home() {
       </nav>
 
       <main>
-        {/* ── Hero ── */}
+        {/* Hero */}
         <section
           id="hero"
           aria-label="Introduction"
@@ -212,7 +212,7 @@ export default function Home() {
                 </h1>
                 <p className="text-xl text-muted-foreground leading-relaxed mb-4 max-w-lg">
                   Full Stack Developer building products from idea to launch. I
-                  turn real problems into real software — clean, functional, and
+                  turn real problems into real software: clean, functional, and
                   built to matter.
                 </p>
                 <p className="text-base text-muted-foreground leading-relaxed mb-8 max-w-lg">
@@ -220,7 +220,7 @@ export default function Home() {
                   tools, and collaborated with early-stage startups. When I'm
                   not coding, I'm leading community at{" "}
                   <span className="text-foreground font-medium">
-                    Latinas in Tech
+                    Latinas in Tech Boston
                   </span>
                   .
                 </p>
@@ -323,7 +323,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* ── About ── */}
+        {/* About */}
         <section
           id="about"
           aria-labelledby="about-heading"
@@ -347,7 +347,7 @@ export default function Home() {
                 <div className="space-y-5 text-muted-foreground leading-relaxed text-base">
                   <p>
                     I'm a Full Stack Developer based in Boston who genuinely
-                    loves building software. Not just writing it — building it.
+                    loves building software. Not just writing it. Building it.
                     Taking something from a rough idea, figuring out the right
                     architecture, and shipping something real that people
                     actually use.
@@ -355,7 +355,7 @@ export default function Home() {
                   <p>
                     My background spans full-stack web development, backend
                     APIs, and database design. I've also worked on AI-powered
-                    applications — including document understanding tools that
+                    applications, including document understanding tools that
                     help people interact with information in smarter ways. I
                     enjoy environments where I can wear multiple hats and move
                     fast.
@@ -369,9 +369,9 @@ export default function Home() {
                     product.
                   </p>
                   <p>
-                    Outside of code, I lead the Boston chapter of{" "}
+                    Outside of code, I lead{" "}
                     <span className="text-foreground font-semibold">
-                      Latinas in Tech
+                      Latinas in Tech Boston
                     </span>{" "}
                     and stay involved with{" "}
                     <span className="text-foreground font-semibold">
@@ -401,7 +401,7 @@ export default function Home() {
                   {
                     icon: Users,
                     label: "Community",
-                    value: "Latinas in Tech",
+                    value: "Latinas in Tech Boston",
                   },
                   {
                     icon: Heart,
@@ -432,7 +432,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* ── Featured Projects ── */}
+        {/* Featured Projects */}
         <section
           id="projects"
           aria-labelledby="projects-heading"
@@ -448,8 +448,8 @@ export default function Home() {
                 Featured Projects
               </h2>
               <p className="text-muted-foreground max-w-2xl mx-auto">
-                Full-stack applications built to solve real problems — each one
-                a story of a challenge, a solution, and something learned.
+                Full-stack applications built to solve real problems. Each one
+                is a story of a challenge, a solution, and something learned.
               </p>
             </div>
 
@@ -503,7 +503,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* ── Community Impact ── */}
+        {/* Community Impact */}
         <section
           id="community"
           aria-labelledby="community-heading"
@@ -565,7 +565,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* ── Contact ── */}
+        {/* Contact */}
         <section
           id="contact"
           aria-labelledby="contact-heading"
@@ -587,7 +587,7 @@ export default function Home() {
                 </h2>
                 <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
                   Whether you're a recruiter, a startup founder, an engineering
-                  team, or someone building something meaningful — I'd love to
+                  team, or someone building something meaningful, I'd love to
                   connect.
                 </p>
                 <p className="text-base text-muted-foreground mb-10 leading-relaxed">
@@ -607,7 +607,7 @@ export default function Home() {
                     {
                       icon: Users,
                       label: "Community",
-                      value: "Latinas in Tech · Resilient Coders",
+                      value: "Latinas in Tech Boston · Resilient Coders",
                     },
                   ].map((item) => (
                     <div key={item.label} className="flex items-center gap-4">
@@ -637,8 +637,7 @@ export default function Home() {
       <footer className="py-8 border-t border-border/40 text-center text-muted-foreground text-sm">
         <div className="container mx-auto px-4">
           <p>
-            © {new Date().getFullYear()} Naima Bogran — Full Stack Developer,
-            Boston MA
+            &copy; {new Date().getFullYear()} Naima Bogran, Full Stack Developer, Boston MA
           </p>
         </div>
       </footer>

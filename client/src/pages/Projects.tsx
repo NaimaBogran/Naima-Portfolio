@@ -21,10 +21,10 @@ interface ProjectMeta {
 const projectDetails: Record<string, ProjectMeta> = {
   "BODY/DOUBLE": {
     problem:
-      "Remote work can feel isolating, especially for people who focus better in the presence of others. Finding a body doubling partner — someone who works alongside you silently — was impossible to do at scale.",
+      "Remote work can feel isolating, especially for people who focus better in the presence of others. Finding a body doubling partner (someone who works alongside you silently) was impossible to do at scale.",
     solution:
       "Built a real-time virtual coworking app that matches users based on their work type and camera preference. An integrated Pomodoro timer keeps sessions structured and prevents burnout.",
-    role: "Full Stack Developer — designed and built the real-time matching system, Socket.io infrastructure, Pomodoro timer, and the full user interface from scratch.",
+    role: "Full Stack Developer who designed and built the real-time matching system, Socket.io infrastructure, Pomodoro timer, and the full user interface from scratch.",
     challenges:
       "Managing concurrent user sessions in real time was the hardest part. Socket.io rooms needed careful lifecycle management to avoid ghost sessions when users disconnected mid-match. Getting the timer to stay in sync across two users required thinking carefully about server-side event broadcasting versus client-side state.",
     learnings:
@@ -33,10 +33,10 @@ const projectDetails: Record<string, ProjectMeta> = {
   },
   "Bet On Me": {
     problem:
-      "Accountability tools exist, but most of them are passive. People needed real skin in the game to follow through on goals — something with actual consequences.",
+      "Accountability tools exist, but most of them are passive. People needed real skin in the game to follow through on goals, something with actual consequences.",
     solution:
       "A social goal-setting app where users join groups, set a timeline for their goal, and stake real money on completing it. Success returns your money. Failure distributes it to the group.",
-    role: "Full Stack Developer — integrated Stripe for payment processing, built group logic and goal tracking, and designed the full-stack architecture with PostgreSQL.",
+    role: "Full Stack Developer who integrated Stripe for payment processing, built group logic and goal tracking, and designed the full-stack architecture with PostgreSQL.",
     challenges:
       "Financial logic is unforgiving. Handling edge cases like a group disbanding mid-goal, partial completions, or payment failures required thorough transaction management. I had to think carefully about data consistency and make sure money was never stuck in an ambiguous state.",
     learnings:
@@ -45,12 +45,12 @@ const projectDetails: Record<string, ProjectMeta> = {
   },
   LetGoLab: {
     problem:
-      "A women's holistic wellness practice needed a professional web presence that reflected their values — warm, accessible, and easy to navigate for clients seeking appointments and resources.",
+      "A women's holistic wellness practice needed a professional web presence that reflected their values: warm, accessible, and easy to navigate for clients seeking appointments and resources.",
     solution:
       "A wellness website with appointment scheduling, resource sharing, and community features, designed to feel as welcoming as the practice itself.",
-    role: "Full Stack Developer & Designer — handled front-to-back implementation, from visual design direction to Express server setup and deployment.",
+    role: "Full Stack Developer and Designer who handled front-to-back implementation, from visual design direction to Express server setup and deployment.",
     challenges:
-      "The challenge wasn't technical complexity — it was craft. The client cared deeply about tone and visual warmth, which meant every font choice, spacing decision, and color mattered. Translating a feeling into a layout while keeping the site fast and accessible required a lot of iteration.",
+      "The challenge wasn't technical complexity. It was craft. The client cared deeply about tone and visual warmth, which meant every font choice, spacing decision, and color mattered. Translating a feeling into a layout while keeping the site fast and accessible required a lot of iteration.",
     learnings:
       "Strengthened my CSS craft and learned how design decisions affect trust and conversion for service-based businesses.",
     githubUrl: "https://github.com/NaimaBogran",
@@ -59,8 +59,8 @@ const projectDetails: Record<string, ProjectMeta> = {
     problem:
       "Teams waste thousands of dollars in unnecessary meetings, but no one stops to calculate the real cost. Without visibility into that number, meeting culture doesn't change.",
     solution:
-      "A productivity tool that calculates the true cost of every meeting based on participant salaries and duration — making the invisible visible so teams can make smarter decisions.",
-    role: "Full Stack Developer — built the cost calculation engine, user-facing interface, and data persistence layer.",
+      "A productivity tool that calculates the true cost of every meeting based on participant salaries and duration, making the invisible visible so teams can make smarter decisions.",
+    role: "Full Stack Developer who built the cost calculation engine, user-facing interface, and data persistence layer.",
     challenges:
       "The logic itself is straightforward, but the UX wasn't. Users needed to input data quickly without friction, and the output needed to feel impactful rather than just informational. Finding the right balance between simplicity and enough context to motivate behavior change took iteration.",
     learnings:
@@ -84,7 +84,7 @@ function ProjectDetailCard({
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, delay: index * 0.1 }}
       viewport={{ once: true }}
-      className="bg-card border border-border/50 rounded-2xl overflow-hidden hover:border-primary/40 hover:shadow-2xl transition-all duration-300 group"
+      className="bg-card border border-border/50 dark:border-border rounded-2xl overflow-hidden hover:border-primary/40 dark:hover:border-primary/60 hover:shadow-2xl dark:hover:shadow-primary/10 transition-all duration-300 group"
       aria-labelledby={`project-title-${project.id}`}
     >
       {/* Image */}
@@ -210,22 +210,22 @@ export default function Projects() {
   const { data: projects, isLoading } = useProjects();
 
   useEffect(() => {
-    document.title = "All Projects — Naima Bogran | Full Stack Developer";
+    document.title = "All Projects | Naima Bogran | Full Stack Developer";
     const setMeta = (selector: string, content: string) => {
       const el = document.querySelector(selector);
       if (el) el.setAttribute("content", content);
     };
     setMeta(
       'meta[name="description"]',
-      "All four full-stack projects by Naima Bogran — BODY/DOUBLE, Bet On Me, LetGoLab, and Meeting Tax. Each project includes the problem, solution, challenges, and learnings."
+      "All four full-stack projects by Naima Bogran: BODY/DOUBLE, Bet On Me, LetGoLab, and Meeting Tax. Each project includes the problem, solution, challenges, and learnings."
     );
-    setMeta('meta[property="og:title"]', "All Projects — Naima Bogran");
+    setMeta('meta[property="og:title"]', "All Projects | Naima Bogran");
     setMeta(
       'meta[property="og:description"]',
       "Full-stack projects built by Naima Bogran. Real problems, real software."
     );
     setMeta('meta[property="og:url"]', "https://naimabogran-portfolio.us/projects");
-    setMeta('meta[name="twitter:title"]', "All Projects — Naima Bogran");
+    setMeta('meta[name="twitter:title"]', "All Projects | Naima Bogran");
     setMeta(
       'meta[name="twitter:description"]',
       "Full-stack projects built by Naima Bogran. Real problems, real software."
@@ -233,21 +233,21 @@ export default function Projects() {
     setMeta('meta[name="twitter:url"]', "https://naimabogran-portfolio.us/projects");
 
     return () => {
-      document.title = "Naima Bogran — Full Stack Developer | Boston, MA";
+      document.title = "Naima Bogran | Full Stack Developer | Boston, MA";
       setMeta(
         'meta[name="description"]',
         "Naima Bogran is a Full Stack Developer based in Boston, MA. She builds full-stack web applications, has experience with AI-powered tools, and leads the Latinas in Tech Boston chapter."
       );
-      setMeta('meta[property="og:title"]', "Naima Bogran — Full Stack Developer");
+      setMeta('meta[property="og:title"]', "Naima Bogran | Full Stack Developer");
       setMeta(
         'meta[property="og:description"]',
-        "Full Stack Developer building real products from idea to launch. Based in Boston, MA. Chapter Lead at Latinas in Tech."
+        "Full Stack Developer building real products from idea to launch. Based in Boston, MA. Chapter Lead at Latinas in Tech Boston."
       );
       setMeta('meta[property="og:url"]', "https://naimabogran-portfolio.us/");
-      setMeta('meta[name="twitter:title"]', "Naima Bogran — Full Stack Developer");
+      setMeta('meta[name="twitter:title"]', "Naima Bogran | Full Stack Developer");
       setMeta(
         'meta[name="twitter:description"]',
-        "Full Stack Developer building real products from idea to launch. Based in Boston, MA. Chapter Lead at Latinas in Tech."
+        "Full Stack Developer building real products from idea to launch. Based in Boston, MA. Chapter Lead at Latinas in Tech Boston."
       );
       setMeta('meta[name="twitter:url"]', "https://naimabogran-portfolio.us/");
     };
@@ -339,8 +339,7 @@ export default function Projects() {
         <div className="container mx-auto px-4 flex flex-col items-center gap-4">
           <SocialLinks />
           <p>
-            © {new Date().getFullYear()} Naima Bogran — Full Stack Developer,
-            Boston MA
+            &copy; {new Date().getFullYear()} Naima Bogran, Full Stack Developer, Boston MA
           </p>
         </div>
       </footer>
