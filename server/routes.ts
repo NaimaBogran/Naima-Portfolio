@@ -118,6 +118,11 @@ export async function registerRoutes(
     app.get("/api/test/last-email", (_req, res) => {
       res.json(lastEmailAttempt ?? null);
     });
+
+    app.post("/api/test/reset-rate-limit", (_req, res) => {
+      ipSubmissions.clear();
+      res.json({ ok: true });
+    });
   }
 
   return httpServer;
