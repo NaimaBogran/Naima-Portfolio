@@ -1,6 +1,9 @@
 import { test, expect, type Page } from "@playwright/test";
+import { DEFAULT_AUTO_RESET_SECONDS } from "../shared/constants";
 
 const BASE_URL = "http://localhost:5000";
+
+const AUTO_RESET_SECONDS = Number(process.env.VITE_CONTACT_RESET_SECONDS) || DEFAULT_AUTO_RESET_SECONDS;
 
 async function resetRateLimit() {
   await fetch(`${BASE_URL}/api/test/reset-rate-limit`, { method: "POST" });
@@ -221,7 +224,7 @@ test.describe("Contact form – countdown auto-reset", () => {
     await expect(page.locator('[data-testid="button-submit"]')).toBeVisible();
   });
 
-  test("countdown auto-fires after 12 seconds with no manual intervention", async ({ page }) => {
+  test("countdown auto-fires after AUTO_RESET_SECONDS with no manual intervention", async ({ page }) => {
     await page.goto("/");
     await scrollToForm(page);
     await submitForm(page);
@@ -229,8 +232,8 @@ test.describe("Contact form – countdown auto-reset", () => {
     // Confirmation should be visible immediately after submission
     await expect(page.locator('[data-testid="confirmation-message"]')).toBeVisible();
 
-    // Wait 13 seconds — longer than AUTO_RESET_SECONDS (12) — without touching anything
-    await page.waitForTimeout(13000);
+    // Wait AUTO_RESET_SECONDS + 1 second buffer — derived from the same constant the frontend uses
+    await page.waitForTimeout((AUTO_RESET_SECONDS + 1) * 1000);
 
     // The timer should have auto-fired: confirmation gone, form visible again
     await expect(page.locator('[data-testid="confirmation-message"]')).not.toBeVisible();

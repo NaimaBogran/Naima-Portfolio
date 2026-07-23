@@ -1,0 +1,1 @@
+export const DEFAULT_AUTO_RESET_SECONDS = 12;
