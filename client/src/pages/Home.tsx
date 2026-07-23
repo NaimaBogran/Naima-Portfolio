@@ -436,13 +436,16 @@ export default function Home() {
         <section
           id="projects"
           aria-labelledby="projects-heading"
-          className="py-24"
+          className="py-24 border-t border-border/30 dark:border-border/40"
         >
           <div className="container mx-auto px-4 max-w-6xl">
             <div className="text-center mb-16">
+              <div className="inline-block px-4 py-1.5 rounded-full bg-primary/10 dark:bg-primary/20 text-primary font-medium text-sm mb-4">
+                Selected Work
+              </div>
               <h2
                 id="projects-heading"
-                className="text-3xl md:text-5xl font-bold mb-4"
+                className="text-3xl md:text-5xl font-bold mb-4 text-foreground"
                 style={{ fontFamily: "var(--font-display)" }}
               >
                 Featured Projects
@@ -490,7 +493,7 @@ export default function Home() {
                   variant="outline"
                   size="lg"
                   data-testid="button-all-projects"
-                  className="rounded-full px-8 h-12 border-2 hover:bg-primary hover:text-primary-foreground hover:border-primary transition-all group"
+                  className="rounded-full px-8 h-12 border-2 border-border dark:border-border hover:bg-primary hover:text-primary-foreground hover:border-primary transition-all group"
                 >
                   Deep-dive into each project
                   <ArrowRight
