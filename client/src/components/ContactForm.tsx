@@ -16,8 +16,7 @@ import {
 } from "@/components/ui/form";
 import { Send, Loader2, CheckCircle2 } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-
-const AUTO_RESET_SECONDS = 12;
+import { AUTO_RESET_SECONDS } from "@/lib/config";
 
 export function ContactForm() {
   const [submitted, setSubmitted] = useState(false);
