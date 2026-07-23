@@ -255,6 +255,16 @@ export default function Home() {
                       Let's Talk
                     </Button>
                   </ScrollLink>
+                  <Link to="/resume">
+                    <Button
+                      size="lg"
+                      variant="outline"
+                      data-testid="button-view-resume"
+                      className="rounded-full px-8 text-lg h-14 border-2 w-full sm:w-auto"
+                    >
+                      View Resume
+                    </Button>
+                  </Link>
                 </div>
 
                 <SocialLinks />
