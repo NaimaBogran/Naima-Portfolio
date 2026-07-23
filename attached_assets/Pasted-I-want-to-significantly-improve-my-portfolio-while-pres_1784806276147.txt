@@ -1,0 +1,337 @@
+I want to significantly improve my portfolio while preserving the existing design language, branding, animations, and overall aesthetic. Think of this as a redesign that improves the content, user experience, accessibility, and functionality—not a complete rebuild.
+
+My goal is for recruiters, engineering managers, startup founders, and potential collaborators to immediately understand who I am and what I bring to the table.
+
+The website should feel modern, polished, approachable, and memorable.
+
+Within 10 seconds of landing on my portfolio, visitors should understand that I am a Software Engineer who builds AI-powered products, enjoys startup environments, and actively contributes to the tech community through leadership and mentorship.
+
+1. Fix the Contact Form (Highest Priority)
+
+The "Get in Touch" contact form currently does not work.
+
+Please:
+
+Determine how the form is currently configured.
+If it has no backend, implement one using a reliable service such as EmailJS, Formspree, Resend, or another lightweight solution.
+Send submissions directly to my email.
+Add client-side validation.
+Add loading and disabled states while submitting.
+Prevent duplicate submissions.
+Display clear success and error messages.
+Ensure it works on desktop and mobile.
+2. Redesign the Portfolio Structure
+
+Reorganize the homepage into a more compelling flow:
+
+Hero
+What I'm Working On
+Featured Projects
+Community Impact
+About Me
+Technical Skills
+Testimonials (leave placeholders if needed)
+Let's Build Something Together (Contact)
+Footer
+
+If creating additional pages improves the experience, add:
+
+All Projects
+Community
+Resume (optional)
+
+Navigation should remain simple and intuitive.
+
+3. Rewrite the Hero Section
+
+The current hero feels too generic.
+
+Rewrite it so it immediately communicates what I do.
+
+Suggested headline:
+
+Building AI-powered products that solve real problems.
+
+Supporting text should naturally communicate that I am:
+
+Software Engineer
+AI Engineer
+Full Stack Developer
+Startup Builder
+Community Leader
+
+Mention naturally:
+
+AI-powered applications
+Full-stack development
+Building products from idea to launch
+Solving meaningful problems
+Collaboration with startups
+Accessibility
+Community involvement
+
+Avoid generic phrases like:
+
+Passionate developer
+Results-driven
+Coding enthusiast
+
+Tone:
+
+Confident.
+
+Friendly.
+
+Authentic.
+
+Conversational.
+
+4. Rewrite the About Section
+
+Instead of reading like a résumé, tell a story.
+
+Include ideas like:
+
+I enjoy building software that solves meaningful problems.
+I love turning complex ideas into intuitive products.
+I've worked on AI-powered document understanding applications.
+I've built recommendation systems.
+I've built full-stack web applications.
+I enjoy startup environments where I can wear multiple hats.
+I'm constantly learning new technologies.
+I enjoy collaborating with engineers, designers, product managers, and founders.
+
+Also highlight community involvement:
+
+Chapter Lead for Latinas in Tech
+Member of Resilient Coders
+Mentor
+Volunteer
+Community organizer
+Boston tech ecosystem
+
+End with a memorable statement about building both technology and opportunities for people.
+
+The writing should feel personal, authentic, and engaging.
+
+5. Add a "What I'm Working On" Section
+
+Instead of only highlighting completed work, showcase what I'm currently focused on.
+
+Create cards for topics like:
+
+🤖 AI Applications
+
+Building software powered by modern language models to help people better interact with information.
+
+🚀 Startup Collaboration
+
+Working with founders to design and build early-stage products and MVPs.
+
+🌎 Community Leadership
+
+Supporting inclusive tech communities through mentoring, networking, and leadership.
+
+☕ Open to Collaborate
+
+Available for software engineering roles, AI projects, startup collaborations, technical consulting, and speaking opportunities.
+
+6. Improve the Featured Projects Section
+
+Expand the Featured Projects section.
+
+Add two additional featured project cards.
+
+Below Featured Projects, include:
+
+View All Projects
+
+Create a dedicated Projects page.
+
+Each project should support:
+
+Title
+Description
+Problem
+Solution
+Technologies
+My Role
+Challenges
+What I Learned
+GitHub
+Live Demo
+Screenshots
+
+Instead of only describing features, every project should tell a story.
+
+Each project should answer:
+
+What problem existed?
+Why did I build it?
+What technical challenges did I solve?
+What impact did it have?
+What did I learn?
+7. Create a Community Impact Section
+
+Community is a major part of my professional identity.
+
+Create a dedicated section highlighting:
+
+Latinas in Tech
+Resilient Coders
+Mentoring
+Volunteer work
+Networking events
+Speaking opportunities
+Community organizing
+Hackathons
+Boston tech ecosystem
+
+If appropriate, create a dedicated Community page with photos, event highlights, and leadership experience.
+
+This section should demonstrate that I contribute to the tech community beyond writing code.
+
+8. Rewrite the Contact Section
+
+Instead of generic contact text, rewrite it into something more inviting.
+
+Suggested title:
+
+Let's Build Something Together
+
+Explain that I'm interested in connecting with:
+
+Recruiters
+Engineering teams
+Startup founders
+Technical communities
+AI builders
+Open-source contributors
+
+Mention that I'd love to collaborate on:
+
+Software engineering roles
+AI engineering
+Startup projects
+Technical consulting
+Community initiatives
+Speaking opportunities
+Coffee chats with engineers and founders
+
+End with a warm, conversational call to action.
+
+9. Improve the Visual Design
+
+Without changing the overall branding:
+
+Improve:
+
+spacing
+typography
+hierarchy
+card layouts
+hover interactions
+responsiveness
+animations
+transitions
+consistency
+
+Make the site feel more polished while maintaining the existing aesthetic.
+
+10. Improve Dark Mode
+
+The circular border around my headshot looks off in dark mode.
+
+Redesign it so it feels intentional and visually balanced.
+
+Review the entire dark mode experience and improve any inconsistent colors or contrast issues.
+
+11. Accessibility
+
+Improve accessibility throughout the site.
+
+Focus on:
+
+semantic HTML
+alt text
+keyboard navigation
+ARIA labels
+accessible forms
+color contrast
+visible focus states
+screen reader compatibility
+12. Mobile Responsiveness
+
+Optimize the experience for:
+
+phones
+tablets
+laptops
+ultrawide displays
+
+Ensure layouts feel intentional across all screen sizes.
+
+13. Performance
+
+Improve performance by optimizing:
+
+image loading
+lazy loading
+bundle size
+Lighthouse score
+Core Web Vitals
+page speed
+14. SEO
+
+Improve discoverability by adding:
+
+descriptive page titles
+meta descriptions
+Open Graph tags
+Twitter cards
+structured data
+sitemap
+robots.txt
+favicon support
+15. Overall Copy Audit
+
+Review every piece of text on the site.
+
+Rewrite headings, descriptions, buttons, and section copy so they feel polished, modern, and authentic.
+
+Avoid overused buzzwords and generic phrases.
+
+Prioritize storytelling over simply listing technologies.
+
+16. Overall UX Review
+
+Review the portfolio from the perspective of:
+
+a senior software engineering hiring manager
+a startup founder
+a recruiter
+a UX designer
+
+Identify any weak areas that would prevent the portfolio from standing out and improve them.
+
+The experience should naturally guide visitors through:
+
+Who I am
+What I build
+Why I build it
+My technical abilities
+My community involvement
+How to work with me
+Final Goal
+
+The finished portfolio should feel like the portfolio of an ambitious software engineer who is already making meaningful contributions through AI, startups, and community leadership.
+
+It should communicate that I:
+
+Build AI-powered and full-stack software that solves real problems.
+Thrive in startup environments and enjoy bringing ideas from concept to launch.
+Care deeply about accessibility, collaboration, and creating technology that helps people.
+Actively contribute to the tech community through leadership, mentorship, and volunteering.
+Am looking for opportunities to collaborate with engineering teams, founders, and organizations building impactful products.
+
+Most importantly, the portfolio should feel professional, authentic, approachable, and memorable, telling a cohesive story about who I am—not just listing projects and technologies.
