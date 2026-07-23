@@ -173,4 +173,23 @@ test.describe("Contact form – countdown auto-reset", () => {
     await expect(page.locator('[data-testid="input-message"]')).toBeVisible();
     await expect(page.locator('[data-testid="button-submit"]')).toBeVisible();
   });
+
+  test("countdown auto-fires after 12 seconds with no manual intervention", async ({ page }) => {
+    await page.goto("/");
+    await scrollToForm(page);
+    await submitForm(page);
+
+    // Confirmation should be visible immediately after submission
+    await expect(page.locator('[data-testid="confirmation-message"]')).toBeVisible();
+
+    // Wait 13 seconds — longer than AUTO_RESET_SECONDS (12) — without touching anything
+    await page.waitForTimeout(13000);
+
+    // The timer should have auto-fired: confirmation gone, form visible again
+    await expect(page.locator('[data-testid="confirmation-message"]')).not.toBeVisible();
+    await expect(page.locator('[data-testid="input-name"]')).toBeVisible();
+    await expect(page.locator('[data-testid="input-email"]')).toBeVisible();
+    await expect(page.locator('[data-testid="input-message"]')).toBeVisible();
+    await expect(page.locator('[data-testid="button-submit"]')).toBeVisible();
+  });
 });
