@@ -56,7 +56,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
               <Badge
                 key={tech}
                 variant="secondary"
-                className="bg-secondary/50 hover:bg-secondary text-secondary-foreground"
+                className="bg-secondary/50 hover:bg-secondary dark:bg-secondary dark:hover:bg-secondary/80 text-secondary-foreground"
               >
                 {tech}
               </Badge>
