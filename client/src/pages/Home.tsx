@@ -124,6 +124,11 @@ export default function Home() {
                   All Projects
                 </span>
               </Link>
+              <Link href="/resume">
+                <span className="cursor-pointer hover:text-primary transition-colors text-sm font-medium">
+                  Resume
+                </span>
+              </Link>
             </div>
             <ThemeToggle />
 
@@ -168,6 +173,11 @@ export default function Home() {
               <Link href="/projects" onClick={() => setMobileMenuOpen(false)}>
                 <span className="cursor-pointer text-base font-medium hover:text-primary transition-colors py-1 block">
                   All Projects
+                </span>
+              </Link>
+              <Link href="/resume" onClick={() => setMobileMenuOpen(false)}>
+                <span className="cursor-pointer text-base font-medium hover:text-primary transition-colors py-1 block">
+                  Resume
                 </span>
               </Link>
             </div>
