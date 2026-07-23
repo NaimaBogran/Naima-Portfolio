@@ -1,5 +1,5 @@
 import { Project } from "@shared/schema";
-import { ExternalLink, Code2 } from "lucide-react";
+import { ExternalLink } from "lucide-react";
 import {
   Card,
   CardContent,
@@ -25,20 +25,23 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
       transition={{ duration: 0.5, delay: index * 0.1 }}
       viewport={{ once: true }}
     >
-      <Card className="group h-full flex flex-col overflow-hidden border-border/50 bg-card hover:border-primary/50 hover:shadow-2xl transition-all duration-300">
+      <Card
+        className="group h-full flex flex-col overflow-hidden border-border/50 bg-card hover:border-primary/50 hover:shadow-2xl transition-all duration-300"
+        data-testid={`card-project-${project.id}`}
+      >
         <div className="relative aspect-video overflow-hidden">
-          <div className="absolute inset-0 bg-primary/10 group-hover:bg-transparent transition-colors duration-300 z-10" />
-          {/* Using a placeholder if no image URL, or the actual URL */}
+          <div className="absolute inset-0 bg-primary/10 group-hover:bg-transparent transition-colors duration-300 z-10" aria-hidden="true" />
           <img
             src={project.imageUrl}
-            alt={project.title}
+            alt={`Screenshot of ${project.title}`}
+            loading="lazy"
             className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
           />
         </div>
-        
+
         <CardHeader>
           <div className="flex justify-between items-start gap-4">
-            <CardTitle className="text-2xl font-bold font-display text-primary">
+            <CardTitle className="text-2xl font-bold text-primary" style={{ fontFamily: "var(--font-display)" }}>
               {project.title}
             </CardTitle>
           </div>
@@ -48,10 +51,10 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
         </CardHeader>
 
         <CardContent className="flex-grow">
-          <div className="flex flex-wrap gap-2">
+          <div className="flex flex-wrap gap-2" aria-label="Technologies used">
             {project.techStack.map((tech) => (
-              <Badge 
-                key={tech} 
+              <Badge
+                key={tech}
                 variant="secondary"
                 className="bg-secondary/50 hover:bg-secondary text-secondary-foreground"
               >
@@ -62,12 +65,18 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
         </CardContent>
 
         <CardFooter className="pt-4 border-t border-border/50">
-          <Button 
-            asChild 
+          <Button
+            asChild
             className="w-full group-hover:bg-primary group-hover:text-primary-foreground transition-colors"
+            data-testid={`button-view-project-${project.id}`}
           >
-            <a href={project.projectUrl} target="_blank" rel="noopener noreferrer">
-              <ExternalLink className="mr-2 h-4 w-4" />
+            <a
+              href={project.projectUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={`View ${project.title} live demo`}
+            >
+              <ExternalLink className="mr-2 h-4 w-4" aria-hidden="true" />
               View Project
             </a>
           </Button>
