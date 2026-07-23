@@ -13,7 +13,7 @@ async function sendContactEmail(name: string, email: string, message: string) {
       method: "POST",
       body: JSON.stringify({
         from: "Portfolio Contact <onboarding@resend.dev>",
-        to: ["nbogran0914@gmail.com"],
+        to: ["naima.e.bogran@gmail.com"],
         subject: `New portfolio message from ${name}`,
         html: `
           <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto;">
