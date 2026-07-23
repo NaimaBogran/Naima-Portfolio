@@ -40,7 +40,7 @@ export function ContactForm() {
       whileInView={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.5 }}
       viewport={{ once: true }}
-      className="w-full max-w-lg mx-auto bg-card border border-border/50 p-8 rounded-2xl shadow-lg"
+      className="w-full max-w-lg mx-auto bg-card border border-border/70 dark:border-border p-8 rounded-2xl shadow-lg dark:shadow-primary/5"
     >
       <h3 className="text-2xl font-bold font-display mb-6">Get in Touch</h3>
       
@@ -55,7 +55,7 @@ export function ContactForm() {
                 <FormControl>
                   <Input 
                     placeholder="Your name" 
-                    className="h-12 bg-background/50 border-border/50 focus:border-primary/50 transition-all"
+                    className="h-12 bg-background/50 dark:bg-input border-border/60 dark:border-border focus:border-primary/60 dark:focus:border-primary/80 transition-all"
                     {...field} 
                   />
                 </FormControl>
@@ -74,7 +74,7 @@ export function ContactForm() {
                   <Input 
                     placeholder="your.email@example.com" 
                     type="email"
-                    className="h-12 bg-background/50 border-border/50 focus:border-primary/50 transition-all"
+                    className="h-12 bg-background/50 dark:bg-input border-border/60 dark:border-border focus:border-primary/60 dark:focus:border-primary/80 transition-all"
                     {...field} 
                   />
                 </FormControl>
@@ -92,7 +92,7 @@ export function ContactForm() {
                 <FormControl>
                   <Textarea 
                     placeholder="How can I help you?" 
-                    className="min-h-[120px] resize-none bg-background/50 border-border/50 focus:border-primary/50 transition-all"
+                    className="min-h-[120px] resize-none bg-background/50 dark:bg-input border-border/60 dark:border-border focus:border-primary/60 dark:focus:border-primary/80 transition-all"
                     {...field} 
                   />
                 </FormControl>

@@ -258,7 +258,7 @@ export default function Home() {
               >
                 <div className="relative w-72 h-72 md:w-96 md:h-96">
                   <motion.div
-                    className="absolute inset-0 rounded-full border-2 border-primary/30"
+                    className="absolute inset-0 rounded-full border-2 border-primary/40 dark:border-primary/70"
                     animate={{ rotate: 360 }}
                     transition={{
                       duration: 20,
@@ -268,7 +268,7 @@ export default function Home() {
                     aria-hidden="true"
                   />
                   <motion.div
-                    className="absolute inset-4 rounded-full border-2 border-dashed border-purple-400/30"
+                    className="absolute inset-4 rounded-full border-2 border-dashed border-purple-400/40 dark:border-purple-400/70"
                     animate={{ rotate: -360, scale: [1, 1.05, 1] }}
                     transition={{
                       duration: 25,
@@ -278,7 +278,7 @@ export default function Home() {
                     aria-hidden="true"
                   />
                   <div
-                    className="absolute inset-8 rounded-full ring-4 ring-primary/20 dark:ring-primary/40 shadow-2xl shadow-primary/20"
+                    className="absolute inset-8 rounded-full ring-4 ring-primary/30 dark:ring-primary/60 shadow-2xl shadow-primary/30 dark:shadow-primary/50"
                     aria-hidden="true"
                   />
                   <div className="absolute inset-8 rounded-full overflow-hidden">
@@ -411,7 +411,7 @@ export default function Home() {
                 ].map((item) => (
                   <div
                     key={item.label}
-                    className="bg-card border border-border/50 rounded-2xl p-5 flex flex-col gap-3 hover:border-primary/40 hover:shadow-lg transition-all duration-300"
+                    className="bg-card border border-border/60 dark:border-border rounded-2xl p-5 flex flex-col gap-3 hover:border-primary/50 dark:hover:border-primary/70 hover:shadow-lg dark:hover:shadow-primary/10 transition-all duration-300"
                   >
                     <item.icon
                       className="w-6 h-6 text-primary"
@@ -533,7 +533,7 @@ export default function Home() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className="bg-card border border-border/50 rounded-2xl p-6 hover:border-primary/40 hover:shadow-xl transition-all duration-300 group"
+                  className="bg-card border border-border/60 dark:border-border rounded-2xl p-6 hover:border-primary/50 dark:hover:border-primary/70 hover:shadow-xl dark:hover:shadow-primary/10 transition-all duration-300 group"
                 >
                   <div className="flex items-start gap-4">
                     <div

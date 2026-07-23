@@ -26,7 +26,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
       viewport={{ once: true }}
     >
       <Card
-        className="group h-full flex flex-col overflow-hidden border-border/50 bg-card hover:border-primary/50 hover:shadow-2xl transition-all duration-300"
+        className="group h-full flex flex-col overflow-hidden border-border/60 dark:border-border bg-card hover:border-primary/50 dark:hover:border-primary/70 hover:shadow-2xl dark:hover:shadow-primary/10 transition-all duration-300"
         data-testid={`card-project-${project.id}`}
       >
         <div className="relative aspect-video overflow-hidden">
@@ -64,7 +64,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
           </div>
         </CardContent>
 
-        <CardFooter className="pt-4 border-t border-border/50">
+        <CardFooter className="pt-4 border-t border-border/60 dark:border-border">
           <Button
             asChild
             className="w-full group-hover:bg-primary group-hover:text-primary-foreground transition-colors"
