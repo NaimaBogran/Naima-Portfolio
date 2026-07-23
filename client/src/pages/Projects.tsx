@@ -224,11 +224,13 @@ export default function Projects() {
       'meta[property="og:description"]',
       "Full-stack projects built by Naima Bogran. Real problems, real software."
     );
+    setMeta('meta[property="og:url"]', "https://naimabogran-portfolio.us/projects");
     setMeta('meta[name="twitter:title"]', "All Projects — Naima Bogran");
     setMeta(
       'meta[name="twitter:description"]',
       "Full-stack projects built by Naima Bogran. Real problems, real software."
     );
+    setMeta('meta[name="twitter:url"]', "https://naimabogran-portfolio.us/projects");
 
     return () => {
       document.title = "Naima Bogran — Full Stack Developer | Boston, MA";
@@ -241,11 +243,13 @@ export default function Projects() {
         'meta[property="og:description"]',
         "Full Stack Developer building real products from idea to launch. Based in Boston, MA. Chapter Lead at Latinas in Tech."
       );
+      setMeta('meta[property="og:url"]', "https://naimabogran-portfolio.us/");
       setMeta('meta[name="twitter:title"]', "Naima Bogran — Full Stack Developer");
       setMeta(
         'meta[name="twitter:description"]',
         "Full Stack Developer building real products from idea to launch. Based in Boston, MA. Chapter Lead at Latinas in Tech."
       );
+      setMeta('meta[name="twitter:url"]', "https://naimabogran-portfolio.us/");
     };
   }, []);
 

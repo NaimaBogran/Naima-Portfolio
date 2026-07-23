@@ -94,7 +94,7 @@ async function seedDatabase() {
 
   await storage.upsertProjectByTitle({
     title: "BODY/DOUBLE",
-    description: "A virtual coworking application where users match with other users based on work filters and camera preference to find a partner to body double with. Includes an integrated Pomodoro timer to prevent burnout.",
+    description: "Remote work is isolating — especially if you focus better alongside others. I built a real-time virtual coworking app that matches users by work type and camera preference, so you can focus with a partner from anywhere. Includes an integrated Pomodoro timer to keep sessions structured.",
     imageUrl: "/images/body-double.png",
     projectUrl: "https://body-double.onrender.com/",
     techStack: ["Node.js", "Express", "Socket.io", "MongoDB"]
@@ -102,7 +102,7 @@ async function seedDatabase() {
 
   await storage.upsertProjectByTitle({
     title: "Bet On Me",
-    description: "A social goal-setting app that allows users to join or create groups, set timelines for goals, and bet real money on achieving them. Money is returned upon success or distributed to the group on failure.",
+    description: "Most accountability tools are passive. This one puts real money on the line — stake cash on a goal, get it back when you succeed, or watch it distributed to your group if you don't. Real consequences change behavior.",
     imageUrl: "/images/bet-on-me.png",
     projectUrl: "https://bet-on-me.onrender.com/",
     techStack: ["Node.js", "Stripe API", "PostgreSQL"]
@@ -110,7 +110,7 @@ async function seedDatabase() {
 
   await storage.upsertProjectByTitle({
     title: "LetGoLab",
-    description: "A holistic wellness website for a women's practice, featuring appointment scheduling, resource sharing, and community engagement tools.",
+    description: "A women's holistic wellness practice needed a home online that felt as warm and welcoming as the practice itself. I built the full thing — UI, backend, scheduling, and community features — with care for how every detail makes visitors feel.",
     imageUrl: "/images/letgolab.png",
     projectUrl: "https://curl-date-86463638.figma.site/",
     techStack: ["CSS", "Express"]
@@ -118,7 +118,7 @@ async function seedDatabase() {
 
   await storage.upsertProjectByTitle({
     title: "Meeting Tax",
-    description: "A productivity tool that calculates the cost of meetings based on participant salaries and duration. Helps teams understand the true cost of their meetings and optimize time management.",
+    description: "Every meeting has a real dollar cost most teams never see. This tool makes it visible — input attendee salaries and meeting duration, and get an instant breakdown of what that calendar block actually costs your organization.",
     imageUrl: "/images/meeting-tax.png",
     projectUrl: "https://meeting-tax.vercel.app/",
     techStack: ["Node.js", "JavaScript", "PostgreSQL"]
