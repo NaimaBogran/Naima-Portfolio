@@ -3,6 +3,42 @@ import { createServer, type Server } from "http";
 import { storage } from "./storage";
 import { api } from "@shared/routes";
 import { z } from "zod";
+import { ReplitConnectors } from "@replit/connectors-sdk";
+
+const connectors = new ReplitConnectors();
+
+async function sendContactEmail(name: string, email: string, message: string) {
+  try {
+    const response = await connectors.proxy("resend", "/emails", {
+      method: "POST",
+      body: JSON.stringify({
+        from: "Portfolio Contact <onboarding@resend.dev>",
+        to: ["nbogran0914@gmail.com"],
+        subject: `New portfolio message from ${name}`,
+        html: `
+          <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto;">
+            <h2 style="color: #333;">New Contact Form Submission</h2>
+            <p><strong>From:</strong> ${name}</p>
+            <p><strong>Email:</strong> <a href="mailto:${email}">${email}</a></p>
+            <hr style="border: none; border-top: 1px solid #eee; margin: 16px 0;" />
+            <p><strong>Message:</strong></p>
+            <p style="white-space: pre-wrap; color: #555;">${message}</p>
+            <hr style="border: none; border-top: 1px solid #eee; margin: 16px 0;" />
+            <p style="color: #999; font-size: 12px;">Sent via your portfolio contact form at naimabogran-portfolio.us</p>
+          </div>
+        `,
+      }),
+    });
+    if (!response.ok) {
+      const body = await response.text();
+      console.error("[email] Resend error:", response.status, body);
+    } else {
+      console.log("[email] Message sent to nbogran0914@gmail.com");
+    }
+  } catch (err) {
+    console.error("[email] Failed to send email:", err);
+  }
+}
 
 export async function registerRoutes(
   httpServer: Server,
@@ -36,6 +72,8 @@ export async function registerRoutes(
     try {
       const input = api.messages.create.input.parse(req.body);
       const message = await storage.createMessage(input);
+      // Fire-and-forget: send email notification; don't fail the request if email fails
+      sendContactEmail(input.name, input.email, input.message);
       res.status(201).json(message);
     } catch (err) {
       if (err instanceof z.ZodError) {
