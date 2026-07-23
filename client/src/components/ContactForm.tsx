@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { insertMessageSchema, type InsertMessage } from "@shared/schema";
@@ -17,8 +17,13 @@ import {
 import { Send, Loader2, CheckCircle2 } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
+const AUTO_RESET_SECONDS = 12;
+
 export function ContactForm() {
   const [submitted, setSubmitted] = useState(false);
+  const [countdown, setCountdown] = useState(AUTO_RESET_SECONDS);
+  const [paused, setPaused] = useState(false);
+  const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
   const { mutate, isPending } = useSendMessage();
 
   const form = useForm<InsertMessage>({
@@ -30,10 +35,45 @@ export function ContactForm() {
     },
   });
 
+  useEffect(() => {
+    if (!submitted || paused) return;
+
+    intervalRef.current = setInterval(() => {
+      setCountdown((prev) => {
+        if (prev <= 1) {
+          clearInterval(intervalRef.current!);
+          setSubmitted(false);
+          setCountdown(AUTO_RESET_SECONDS);
+          return AUTO_RESET_SECONDS;
+        }
+        return prev - 1;
+      });
+    }, 1000);
+
+    return () => {
+      if (intervalRef.current) {
+        clearInterval(intervalRef.current);
+        intervalRef.current = null;
+      }
+    };
+  }, [submitted, paused]);
+
+  function handleReset() {
+    if (intervalRef.current) {
+      clearInterval(intervalRef.current);
+      intervalRef.current = null;
+    }
+    setSubmitted(false);
+    setPaused(false);
+    setCountdown(AUTO_RESET_SECONDS);
+  }
+
   function onSubmit(data: InsertMessage) {
     mutate(data, {
       onSuccess: () => {
         form.reset();
+        setCountdown(AUTO_RESET_SECONDS);
+        setPaused(false);
         setSubmitted(true);
       },
     });
@@ -67,14 +107,44 @@ export function ContactForm() {
               <p className="text-xl font-semibold font-display mb-1">Message received!</p>
               <p className="text-muted-foreground">Thanks! I'll be in touch soon.</p>
             </div>
-            <Button
-              variant="ghost"
-              className="mt-2 text-sm text-muted-foreground hover:text-foreground"
-              onClick={() => setSubmitted(false)}
-              data-testid="button-send-another"
-            >
-              Send another message
-            </Button>
+
+            <div className="flex flex-col items-center gap-2 mt-1">
+              {!paused ? (
+                <p className="text-sm text-muted-foreground" data-testid="countdown-text">
+                  Returning to form in{" "}
+                  <span className="font-semibold tabular-nums text-foreground" data-testid="countdown-value">
+                    {countdown}s
+                  </span>
+                  …
+                </p>
+              ) : (
+                <p className="text-sm text-muted-foreground" data-testid="countdown-paused-text">
+                  Auto-reset paused.
+                </p>
+              )}
+
+              <div className="flex items-center gap-3">
+                <Button
+                  variant="ghost"
+                  size="sm"
+                  className="text-sm text-muted-foreground hover:text-foreground"
+                  onClick={handleReset}
+                  data-testid="button-send-another"
+                >
+                  Send another message
+                </Button>
+                <span className="text-border">|</span>
+                <Button
+                  variant="ghost"
+                  size="sm"
+                  className="text-sm text-muted-foreground hover:text-foreground"
+                  onClick={() => setPaused((p) => !p)}
+                  data-testid="button-pause-countdown"
+                >
+                  {paused ? "Resume" : "Cancel"}
+                </Button>
+              </div>
+            </div>
           </motion.div>
         ) : (
           <motion.div
