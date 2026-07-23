@@ -68,6 +68,7 @@ export function ContactForm() {
   }
 
   function onSubmit(data: InsertMessage) {
+    if (isPending) return;
     mutate(data, {
       onSuccess: () => {
         form.reset();
