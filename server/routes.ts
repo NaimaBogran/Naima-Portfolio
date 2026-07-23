@@ -7,7 +7,11 @@ import { ReplitConnectors } from "@replit/connectors-sdk";
 
 const connectors = new ReplitConnectors();
 
+type EmailRecord = { name: string; email: string; message: string; sentAt: string };
+let lastEmailAttempt: EmailRecord | null = null;
+
 async function sendContactEmail(name: string, email: string, message: string) {
+  lastEmailAttempt = { name, email, message, sentAt: new Date().toISOString() };
   try {
     const response = await connectors.proxy("resend", "/emails", {
       method: "POST",
@@ -33,7 +37,7 @@ async function sendContactEmail(name: string, email: string, message: string) {
       const body = await response.text();
       console.error("[email] Resend error:", response.status, body);
     } else {
-      console.log("[email] Message sent to nbogran0914@gmail.com");
+      console.log("[email] Message sent to naima.e.bogran@gmail.com");
     }
   } catch (err) {
     console.error("[email] Failed to send email:", err);
@@ -85,6 +89,15 @@ export async function registerRoutes(
       throw err;
     }
   });
+
+  // Development-only endpoint: returns the last email payload attempted by sendContactEmail.
+  // Used by automated tests to assert that an email notification was triggered without
+  // relying on the Resend API actually delivering it.
+  if (process.env.NODE_ENV !== "production") {
+    app.get("/api/test/last-email", (_req, res) => {
+      res.json(lastEmailAttempt ?? null);
+    });
+  }
 
   return httpServer;
 }
