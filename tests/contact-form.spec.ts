@@ -81,6 +81,53 @@ test.describe("Contact form – end-to-end flow", () => {
   });
 });
 
+test.describe("Contact form – double-submit protection", () => {
+  async function scrollToForm(page: Page) {
+    await page.evaluate(() => {
+      const el = document.getElementById("contact");
+      if (el) el.scrollIntoView({ behavior: "instant" });
+    });
+    await page.waitForSelector('[data-testid="input-name"]', { state: "visible" });
+  }
+
+  test.beforeEach(async () => {
+    await resetRateLimit();
+  });
+
+  test("rapidly double-clicking Submit sends only one POST request and disables the button", async ({ page }) => {
+    const ts = Date.now();
+
+    // Track how many POST /api/messages requests reach the server
+    let requestCount = 0;
+    page.on("request", (req) => {
+      if (req.method() === "POST" && req.url().includes("/api/messages")) {
+        requestCount++;
+      }
+    });
+
+    await page.goto("/");
+    await scrollToForm(page);
+
+    await page.fill('[data-testid="input-name"]', `Double-Click Test ${ts}`);
+    await page.fill('[data-testid="input-email"]', `double-click-${ts}@example.com`);
+    await page.fill('[data-testid="input-message"]', "Double-submit protection test – please ignore.");
+
+    const submitBtn = page.locator('[data-testid="button-submit"]');
+
+    // Double-click rapidly — both clicks happen before the component can re-render
+    await submitBtn.dblclick();
+
+    // After the first click the button must become disabled (isPending = true)
+    await expect(submitBtn).toBeDisabled({ timeout: 3000 });
+
+    // Wait for the successful response and confirmation panel to appear
+    await expect(page.locator('[data-testid="confirmation-message"]')).toBeVisible({ timeout: 10000 });
+
+    // Exactly one network request must have been made
+    expect(requestCount).toBe(1);
+  });
+});
+
 test.describe("Contact form – countdown auto-reset", () => {
   async function scrollToForm(page: Page) {
     await page.evaluate(() => {
