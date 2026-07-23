@@ -17,9 +17,9 @@ export function useSendMessage() {
       });
 
       if (!res.ok) {
-        if (res.status === 400) {
-          const error = api.messages.create.responses[400].parse(await res.json());
-          throw new Error(error.message);
+        if (res.status === 400 || res.status === 429) {
+          const body = await res.json();
+          throw new Error(body.message);
         }
         throw new Error("Failed to send message");
       }

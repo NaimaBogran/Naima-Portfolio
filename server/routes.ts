@@ -7,6 +7,23 @@ import { ReplitConnectors } from "@replit/connectors-sdk";
 
 const connectors = new ReplitConnectors();
 
+const RATE_LIMIT_MAX = 5;
+const RATE_LIMIT_WINDOW_MS = 60 * 60 * 1000; // 1 hour
+
+const ipSubmissions = new Map<string, number[]>();
+
+function isRateLimited(ip: string): boolean {
+  const now = Date.now();
+  const cutoff = now - RATE_LIMIT_WINDOW_MS;
+  const timestamps = (ipSubmissions.get(ip) ?? []).filter(t => t > cutoff);
+  if (timestamps.length >= RATE_LIMIT_MAX) {
+    return true;
+  }
+  timestamps.push(now);
+  ipSubmissions.set(ip, timestamps);
+  return false;
+}
+
 type EmailRecord = { name: string; email: string; message: string; sentAt: string };
 let lastEmailAttempt: EmailRecord | null = null;
 
@@ -73,6 +90,10 @@ export async function registerRoutes(
   });
 
   app.post(api.messages.create.path, async (req, res) => {
+    const ip = req.ip ?? req.socket.remoteAddress ?? "unknown";
+    if (isRateLimited(ip)) {
+      return res.status(429).json({ message: "Too many messages sent. Please wait an hour before trying again." });
+    }
     try {
       const input = api.messages.create.input.parse(req.body);
       const message = await storage.createMessage(input);
