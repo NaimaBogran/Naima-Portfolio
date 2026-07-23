@@ -481,13 +481,17 @@ export default function Home() {
               </div>
             ) : (
               <div className="grid md:grid-cols-2 gap-8">
-                {projects?.map((project, index) => (
-                  <ProjectCard
-                    key={project.id}
-                    project={project}
-                    index={index}
-                  />
-                ))}
+                {projects
+                  ?.filter((p) =>
+                    ["BODY/DOUBLE", "Bet On Me", "Multilingual AI Document Assistant", "Meeting Tax"].includes(p.title)
+                  )
+                  .map((project, index) => (
+                    <ProjectCard
+                      key={project.id}
+                      project={project}
+                      index={index}
+                    />
+                  ))}
               </div>
             )}
 

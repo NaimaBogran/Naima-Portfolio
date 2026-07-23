@@ -163,5 +163,21 @@ async function seedDatabase() {
     techStack: ["Node.js", "JavaScript", "PostgreSQL"]
   });
 
+  await storage.upsertProjectByTitle({
+    title: "Multilingual AI Document Assistant",
+    description: "Language shouldn't be a barrier to understanding your own documents. I helped build an AI-powered tool that lets anyone upload a file and instantly translate, summarize, and ask questions about it — in 19+ languages — with zero data retention.",
+    imageUrl: "/images/ai-document-assistant.png",
+    projectUrl: "https://multilingual-ai-document-assistant-sigma.vercel.app/",
+    techStack: ["Next.js", "TypeScript", "RAG", "Node.js"]
+  });
+
+  await storage.upsertProjectByTitle({
+    title: "Qreate Media",
+    description: "UGC creators and brands both have a problem: finding each other. Qreate is a marketplace that connects everyday creators with brands looking for authentic content for ads and campaigns. I improved the frontend and fixed key upload flows for video and image content.",
+    imageUrl: "/images/qreate-media.png",
+    projectUrl: "https://qreatemedia.com",
+    techStack: ["JavaScript", "Node.js", "Express"]
+  });
+
   console.log("Projects synced.");
 }

@@ -67,6 +67,29 @@ const projectDetails: Record<string, ProjectMeta> = {
       "Practiced building tools that change behavior through data transparency, and refined skills in clean UX for productivity software.",
     githubUrl: "https://github.com/NaimaBogran",
   },
+  "Multilingual AI Document Assistant": {
+    problem:
+      "Language barriers make documents inaccessible to millions of people. Someone receiving a legal form, medical record, or work contract in a language they don't speak has no easy way to understand it — let alone ask questions about it.",
+    solution:
+      "An AI-powered web app built with Resilient Labs that lets users upload any document (PDF, DOCX, TXT, or image) and instantly translate it into 19+ languages, summarize it, and ask natural language questions about the content. Files are never stored.",
+    role: "AI Engineering Fellow who implemented data preprocessing workflows, evaluated LLM performance through iterative testing and quantitative metrics, and collaborated on a stateless privacy-first architecture using RAG and semantic search.",
+    challenges:
+      "Building a system that handles multilingual input reliably required careful evaluation of model behavior across language pairs. Getting accurate answers from a model about a translated document meant tuning retrieval quality and prompt structure. Safety detection also had to balance sensitivity without blocking legitimate queries.",
+    learnings:
+      "Gained hands-on experience with RAG pipelines, semantic search, LLM evaluation, and building AI systems where privacy and accuracy aren't trade-offs but requirements.",
+    githubUrl: "https://github.com/Resilient-Labs/multilingual-ai-document-assistant",
+  },
+  "Qreate Media": {
+    problem:
+      "UGC creators and brands are looking for each other but have no efficient way to connect. Brands need authentic content for ads and campaigns; creators need a structured way to license their work and get paid.",
+    solution:
+      "A marketplace platform that connects everyday creators with brands seeking authentic user-generated content. Creators build a portfolio and license their content directly; brands browse, discover, and pay creators without middlemen.",
+    role: "Frontend contributor who improved the user interface and fixed key functionality around video and image upload flows, ensuring content could be submitted reliably across the platform.",
+    challenges:
+      "Media upload is one of the most failure-prone parts of any web app. Handling different file types, sizes, and browser behaviors consistently while keeping the UX smooth required careful attention to edge cases and error states that most users would never notice unless something went wrong.",
+    learnings:
+      "Strengthened frontend debugging skills and developed a sharper eye for UX details that matter to real users, especially in media-heavy products where the upload experience sets the tone for the entire platform.",
+  },
 };
 
 function ProjectDetailCard({
