@@ -1,5 +1,14 @@
 import { test, expect } from "@playwright/test";
 
+test.describe("Resume PDF file", () => {
+  test("GET /resume.pdf returns 200 with Content-Type application/pdf", async ({ request }) => {
+    const response = await request.get("/resume.pdf");
+    expect(response.status()).toBe(200);
+    const contentType = response.headers()["content-type"] ?? "";
+    expect(contentType).toContain("application/pdf");
+  });
+});
+
 test.describe("Resume page", () => {
   test.beforeEach(async ({ page }) => {
     await page.goto("/resume");
