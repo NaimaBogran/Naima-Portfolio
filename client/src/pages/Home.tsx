@@ -366,44 +366,71 @@ export default function Home() {
                 </h2>
                 <div className="space-y-5 text-muted-foreground leading-relaxed text-base">
                   <p>
-                    I'm a Full Stack Developer based in Boston who genuinely
-                    loves building software. Not just writing it. Building it.
-                    Taking something from a rough idea, figuring out the right
-                    architecture, and shipping something real that people
-                    actually use.
+                    I'm a{" "}
+                    <span className="text-foreground font-semibold">
+                      Software Engineer
+                    </span>{" "}
+                    based in Boston who loves turning ideas into{" "}
+                    <span className="text-foreground font-semibold">
+                      products people actually use
+                    </span>
+                    . I enjoy taking a problem, figuring out the best way to
+                    solve it, and building something that's intuitive,
+                    reliable, and genuinely useful.
                   </p>
                   <p>
-                    My background spans full-stack web development, backend
-                    APIs, and database design. I've also worked on AI-powered
-                    applications, including document understanding tools that
-                    help people interact with information in smarter ways. I
-                    enjoy environments where I can wear multiple hats and move
-                    fast.
+                    My experience spans{" "}
+                    <span className="text-foreground font-semibold">
+                      full-stack development, backend systems, and AI-powered
+                      applications
+                    </span>
+                    . I've worked on projects ranging from document
+                    understanding tools and recommendation systems to
+                    early-stage startup products. I'm naturally curious, so
+                    I'm always exploring new technologies, experimenting with
+                    AI, and learning from the people around me. I enjoy
+                    digging into unfamiliar problems and figuring things
+                    out, whether that means learning a new framework,
+                    improving a feature, or finding a better solution.
                   </p>
                   <p>
-                    Startup culture fits me well. I thrive when there's
-                    ambiguity to navigate, problems to solve creatively, and a
-                    team that cares about what they're building. I've
-                    collaborated with founders, designers, and engineers across
-                    early-stage projects where the work actually shapes the
-                    product.
+                    I also enjoy the pace of{" "}
+                    <span className="text-foreground font-semibold">
+                      startup environments
+                    </span>
+                    . I like wearing multiple hats, collaborating closely with
+                    founders, designers, and engineers, and helping shape
+                    products from the ground up. Being part of a small team
+                    means{" "}
+                    <span className="text-foreground font-semibold">
+                      every contribution has an impact
+                    </span>
+                    , and that's the kind of work I find the most rewarding.
                   </p>
                   <p>
-                    Outside of code, I lead{" "}
+                    Outside of engineering, I'm a Chapter Lead for{" "}
                     <span className="text-foreground font-semibold">
                       Latinas in Tech Boston
                     </span>{" "}
-                    and stay involved with{" "}
+                    and an active member of{" "}
                     <span className="text-foreground font-semibold">
                       Resilient Coders
                     </span>
-                    , a nonprofit expanding access to software engineering
-                    careers. I mentor early-career engineers and show up for the
-                    Boston tech community because I believe who gets to build
-                    technology matters just as much as what gets built.
+                    . A big part of what I enjoy about working in tech is the
+                    people. You'll usually find me at meetups, conferences, or
+                    coffee chats, learning from other engineers, meeting
+                    founders, and building relationships within the Boston
+                    tech community. I care about creating opportunities for
+                    others because I believe the best technology comes from{" "}
+                    <span className="text-foreground font-semibold">
+                      diverse teams and shared knowledge
+                    </span>
+                    .
                   </p>
                   <p className="text-foreground font-medium">
-                    I build software. I build community. Both matter.
+                    At the end of the day, I enjoy building things that help
+                    people, whether that's software or stronger tech
+                    communities.
                   </p>
                 </div>
               </motion.div>
