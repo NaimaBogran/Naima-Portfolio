@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+  <!-- Background: matches site's near-white background -->
+  <rect width="100" height="100" rx="18" fill="hsl(220,30%,98%)"/>
+  <!-- "NB" in dark foreground color -->
+  <text
+    x="8"
+    y="72"
+    font-family="'Outfit', 'Inter', system-ui, sans-serif"
+    font-weight="700"
+    font-size="58"
+    letter-spacing="-2"
+    fill="hsl(220,20%,10%)"
+  >NB</text>
+  <!-- "." in primary purple -->
+  <text
+    x="87"
+    y="72"
+    font-family="'Outfit', 'Inter', system-ui, sans-serif"
+    font-weight="700"
+    font-size="58"
+    fill="hsl(262,83%,58%)"
+  >.</text>
+</svg>
