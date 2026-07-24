@@ -7,6 +7,16 @@ test.describe("Resume PDF file", () => {
     const contentType = response.headers()["content-type"] ?? "";
     expect(contentType).toContain("application/pdf");
   });
+
+  test("GET /resume.pdf returns a non-empty valid PDF body", async ({ request }) => {
+    const response = await request.get("/resume.pdf");
+    const body = await response.body();
+    // Assert the file is non-empty
+    expect(body.length).toBeGreaterThan(0);
+    // Assert the PDF magic bytes (%PDF) are present at the start of the file
+    const magicBytes = body.slice(0, 4).toString("ascii");
+    expect(magicBytes).toBe("%PDF");
+  });
 });
 
 test.describe("Resume page", () => {
