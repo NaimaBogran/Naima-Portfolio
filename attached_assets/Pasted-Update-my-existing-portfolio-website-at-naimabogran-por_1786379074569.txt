@@ -1,0 +1,340 @@
+Update my existing portfolio website at naimabogran-portfolio.us to add my newest client project:
+
+Brianne Beatrice — Personal Brand Website
+Live site: https://briannebeatrice.com
+
+IMPORTANT:
+Do not redesign my portfolio.
+
+Preserve the current:
+- visual style
+- project card design
+- typography
+- spacing
+- hover behavior
+- animations
+- project-detail structure
+- writing tone
+- responsive behavior
+
+Study how my existing project cards and project-detail pages are written and make this project feel like it has always belonged in the portfolio.
+
+The portfolio currently has a featured Projects section on the landing page and a separate All Projects section/page.
+
+Add Brianne Beatrice to BOTH.
+
+==================================================
+1. HOMEPAGE FEATURED PROJECTS
+==================================================
+
+Add Brianne Beatrice as one of the featured projects on the homepage.
+
+Replace Bet On Me in the homepage featured-project selection.
+
+IMPORTANT:
+Do NOT delete Bet On Me from the portfolio.
+Bet On Me should remain available under All Projects.
+
+Keep BODY/DOUBLE and the other current homepage projects intact unless replacing Bet On Me requires reordering the cards for visual balance.
+
+Use a strong screenshot of:
+
+https://briannebeatrice.com
+
+Prefer a screenshot showing:
+- the signature Brianne Beatrice branding
+- professional hero photography
+- “Master of Performance & Inspiration”
+- the polished green/gold visual identity
+
+Use the same image treatment and aspect ratio as the existing project cards.
+
+==================================================
+2. PROJECT TITLE
+==================================================
+
+Use:
+
+Brianne Beatrice
+
+Optional small category/descriptor if the current project system supports one:
+
+Client Website / Personal Brand
+
+Do not title the project “Master of Performance & Inspiration.”
+That is Brianne’s brand title, not the project name.
+
+==================================================
+3. HOMEPAGE PROJECT COPY
+==================================================
+
+Match the concise, narrative tone used by my existing project cards.
+
+Suggested copy:
+
+“An accomplished educator, director, actor, and speaker needed one personal brand that could bring decades of work under a single identity. I designed and developed a responsive portfolio that turns a wide-ranging career into a cohesive platform built around speaking, storytelling, and impact.”
+
+If this is longer than the other cards, shorten it while preserving the same idea and matching their approximate word count.
+
+Alternative shorter version:
+
+“Decades of teaching, directing, performance, and recognition needed one cohesive home. I designed and developed a personal brand site that brings Brianne’s work together while positioning her growing career as a motivational speaker.”
+
+Use whichever better matches the exact length and writing style of the current cards.
+
+==================================================
+4. TAGS / TECHNOLOGIES
+==================================================
+
+Use the existing tag style.
+
+Include only technologies or disciplines that are factually appropriate based on the current project.
+
+Suggested tags:
+
+React
+Responsive Design
+UI/UX
+Client Work
+
+If the site currently uses TypeScript, Tailwind, or another framework, confirm that from the codebase before adding those tags.
+
+Do not invent technologies.
+
+If the portfolio mixes technical and discipline tags, prioritize:
+
+Web Development
+UI/UX
+Responsive Design
+Client Work
+
+==================================================
+5. ALL PROJECTS
+==================================================
+
+Add the same Brianne Beatrice project to the All Projects collection.
+
+Do not remove or replace another project from All Projects.
+
+The All Projects card should use the same:
+- image
+- title
+- description
+- tags
+- links
+
+as the featured version unless the existing design intentionally uses shorter copy there.
+
+==================================================
+6. PROJECT DETAIL PAGE
+==================================================
+
+Create a full project-detail page using the same structure and visual system as my existing project case studies.
+
+Do not turn this into a generic marketing case study.
+
+Match the voice and section structure already present in my portfolio.
+
+Use the following content as source material.
+
+PROJECT:
+Brianne Beatrice Personal Brand Website
+
+LIVE SITE:
+https://briannebeatrice.com
+
+PROJECT TYPE:
+Freelance Client Project
+
+ROLE:
+Designer & Developer
+
+OVERVIEW:
+
+Brianne Beatrice is an educator, theatre director, actor, public speaker, and mentor with more than two decades of experience.
+
+The challenge was not simply creating a portfolio. Brianne has worked across several disciplines, and her long-term goal is to grow her presence as a motivational speaker.
+
+The website needed to bring those identities together without feeling scattered or reducing her career to a traditional acting résumé or academic CV.
+
+The resulting brand centers on her chosen title:
+
+“Master of Performance & Inspiration”
+
+==================================================
+7. CHALLENGE
+==================================================
+
+Write this section in the same concise storytelling voice used throughout my existing portfolio.
+
+Core challenge:
+
+Brianne had a large amount of material:
+- professional recognition
+- teaching experience
+- teaching philosophy
+- directing history
+- acting credits
+- published articles
+- podcast appearance
+- video
+- student feedback
+- professional photography
+- multiple career identities
+
+The primary UX/content challenge was deciding how to organize this information without overwhelming visitors.
+
+The site also needed to represent both:
+1. Brianne’s established career
+2. the direction she wants her career to move toward — motivational and inspirational speaking
+
+Suggested framing:
+
+“The challenge wasn’t a lack of content — it was deciding what deserved the spotlight.”
+
+Use that idea if it matches my existing writing voice.
+
+==================================================
+8. SOLUTION
+==================================================
+
+Explain that I built the site around a personal-brand strategy rather than treating it as a traditional résumé site.
+
+Key decisions included:
+
+- Making “Master of Performance & Inspiration” the central brand
+- Giving Speaking its own prominent section
+- Creating a Signature Talk section for:
+  “Unshakable: Confidence, Resilience & Integrity”
+- Organizing teaching, directing, acting, recognition, and media into distinct experiences
+- Using real production posters and professional photography throughout
+- Turning lengthy résumé/CV material into scannable web content
+- Creating visual recognition timelines/cards instead of dumping award lists
+- Incorporating student feedback and professional recognition as social proof
+- Creating clear booking/contact pathways
+- Developing a green, cream, and gold visual identity
+- Creating signature-style branding and favicon treatment
+- Making the website responsive across desktop and mobile
+
+==================================================
+9. CLIENT COLLABORATION
+==================================================
+
+If my existing project-detail pages support a process or lessons section, include the client collaboration aspect.
+
+Explain concisely that the project was iterative.
+
+Brianne reviewed versions of the site and provided:
+- content
+- photography
+- updated recognition details
+- design preferences
+- branding feedback
+- page requests
+- corrections
+
+The site evolved during the project, including the later addition of:
+- Acting
+- signature branding
+- testimonials/student feedback
+- a signature speaking talk
+- additional directing productions and media
+
+Frame this positively as iterative client development, not scope confusion.
+
+Suggested idea:
+
+“Working directly with the client meant the site evolved as her vision became clearer. Each review moved the project closer to a site that reflected not only what she had accomplished, but where she wanted her career to go next.”
+
+==================================================
+10. OUTCOME
+==================================================
+
+End with the result rather than repeating features.
+
+Suggested copy:
+
+“The finished site gives Brianne one cohesive home for a career that spans education, theatre, performance, and speaking — while leaving room for her speaking brand to continue growing.”
+
+Mention that the live site uses her custom domain:
+
+briannebeatrice.com
+
+==================================================
+11. PROJECT LINKS
+==================================================
+
+Add:
+
+Live Site
+https://briannebeatrice.com
+
+Do not add a GitHub repository button unless this project has a repository that I explicitly want public.
+
+Since this is client work, prioritize the live-site CTA.
+
+Use the same CTA wording/style as the rest of my portfolio.
+
+==================================================
+12. VISUAL PRESENTATION
+==================================================
+
+For the project-detail page, use screenshots from the live website rather than generic mockups if possible.
+
+Good screenshots would include:
+
+1. Homepage hero / branding
+2. Speaking page with “Unshakable”
+3. Directing page with production posters
+4. Recognition page
+5. Mobile view
+
+Do not overload the case study with screenshots.
+
+Use the same screenshot treatment as my other project pages.
+
+==================================================
+13. TONE
+==================================================
+
+This is important.
+
+Match the existing portfolio writing voice.
+
+Do not use generic AI-style phrases such as:
+- seamless experience
+- cutting-edge solution
+- visually stunning
+- robust platform
+- dynamic digital presence
+- transformative solution
+
+Keep the writing:
+- direct
+- conversational
+- specific
+- problem-focused
+- reflective
+
+The project should sound like the same person wrote every portfolio entry.
+
+==================================================
+14. FINAL QA
+==================================================
+
+After implementation verify:
+
+- Brianne Beatrice appears on the homepage
+- Bet On Me is removed ONLY from homepage featured projects
+- Bet On Me remains in All Projects
+- Brianne Beatrice appears in All Projects
+- Project image loads
+- briannebeatrice.com opens correctly
+- all project links work
+- cards have consistent height/spacing
+- tags match existing styles
+- project detail page matches the other case studies
+- mobile layout remains intact
+- no duplicate project entries
+- no placeholder text remains
+- no technologies were invented

@@ -520,7 +520,7 @@ export default function Home() {
               <div className="grid md:grid-cols-2 gap-8">
                 {projects
                   ?.filter((p) =>
-                    ["BODY/DOUBLE", "Bet On Me", "Multilingual AI Document Assistant", "Meeting Tax"].includes(p.title)
+                    ["BODY/DOUBLE", "Brianne Beatrice", "Multilingual AI Document Assistant", "Meeting Tax"].includes(p.title)
                   )
                   .map((project, index) => (
                     <ProjectCard

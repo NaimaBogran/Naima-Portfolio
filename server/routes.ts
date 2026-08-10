@@ -179,5 +179,13 @@ async function seedDatabase() {
     techStack: ["JavaScript", "Node.js", "Express"]
   });
 
+  await storage.upsertProjectByTitle({
+    title: "Brianne Beatrice",
+    description: "Decades of teaching, directing, performance, and recognition needed one cohesive home. I designed and developed a personal brand site that brings Brianne's work together while positioning her growing career as a motivational speaker.",
+    imageUrl: "/images/brianne-beatrice.png",
+    projectUrl: "https://briannebeatrice.com",
+    techStack: ["Web Development", "UI/UX", "Responsive Design", "Client Work"]
+  });
+
   console.log("Projects synced.");
 }

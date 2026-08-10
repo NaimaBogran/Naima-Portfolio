@@ -90,6 +90,17 @@ const projectDetails: Record<string, ProjectMeta> = {
     learnings:
       "Strengthened frontend debugging skills and developed a sharper eye for UX details that matter to real users, especially in media-heavy products where the upload experience sets the tone for the entire platform.",
   },
+  "Brianne Beatrice": {
+    problem:
+      "Brianne Beatrice is an educator, theatre director, actor, public speaker, and mentor with more than two decades of experience. The challenge wasn't a lack of content — it was deciding what deserved the spotlight. She needed one personal brand that could hold all of it without reducing her career to a traditional résumé or academic CV.",
+    solution:
+      "Built a responsive personal brand site centered on her chosen identity: 'Master of Performance & Inspiration.' The site gives Speaking its own dedicated section — including a Signature Talk page for 'Unshakable: Confidence, Resilience & Integrity' — and organizes teaching, directing, acting, recognition, and media into distinct experiences. Lengthy CV material was transformed into scannable web content, and real production posters, professional photography, and student feedback were woven throughout. A green, cream, and gold visual identity ties it all together.",
+    role: "Designer and Developer who handled everything from information architecture and visual identity to full implementation and deployment across a custom domain.",
+    challenges:
+      "Brianne's career spans multiple disciplines, and her long-term direction — growing as a motivational speaker — was still taking shape during the project. The site needed to honor her established work while making room for where she's headed. Working directly with the client meant the project evolved as her vision became clearer. Each review added new sections, refined the branding, or introduced content like acting credits, testimonials, and a signature speaking talk.",
+    learnings:
+      "Client work requires a different kind of patience than solo projects. The best result came from staying flexible, asking good questions, and treating each round of feedback as a step closer to something that genuinely reflects the person — not just a list of credentials.",
+  },
 };
 
 function ProjectDetailCard({
