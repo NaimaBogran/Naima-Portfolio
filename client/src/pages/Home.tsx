@@ -216,7 +216,7 @@ export default function Home() {
                   style={{ fontFamily: "var(--font-display)" }}
                 >
                   Hi, I'm <br />
-                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-purple-400">
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-sky-400">
                     Naima Bogran
                   </span>
                 </h1>
@@ -288,7 +288,7 @@ export default function Home() {
                     aria-hidden="true"
                   />
                   <motion.div
-                    className="absolute inset-4 rounded-full border-2 border-dashed border-purple-400/40 dark:border-purple-400/70"
+                    className="absolute inset-4 rounded-full border-2 border-dashed border-sky-400/40 dark:border-sky-400/70"
                     animate={{ rotate: -360, scale: [1, 1.05, 1] }}
                     transition={{
                       duration: 25,
